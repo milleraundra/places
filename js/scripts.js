@@ -17,7 +17,6 @@ $(document).ready(function() {
 
 		$("ul#places").append("<li><span class='place'>" + newPlace.location1 + "</span></li>");
 
-		//this code clears input fields
 		$("input#new-location1").val("");
 	 	$("input#new-landmark").val("");
 		$("input#new-time-of-year").val("");
@@ -25,53 +24,11 @@ $(document).ready(function() {
 
 
 		$(".place").last().click(function() {
-  	$("#show-place").show();
-  	// $("#show-contact h2").text(newContact.fullName());
-  	$(".location1").text(newPlace.location1);
-		$(".landmark").text(newPlace.landmark);
-		$(".time-of-year").text(newPlace.timeOfYear);
-		$(".note").text(newPlace.note);
-
-  	// $(".last-name").text(newContact.lastName);
-});
-
+	  		$("#show-place").show();
+	  		$(".location1").text(newPlace.location1);
+			$(".landmark").text(newPlace.landmark);
+			$(".time-of-year").text(newPlace.timeOfYear);
+			$(".note").text(newPlace.note);
+		});
 	});
 });
-
-
-
-// function Contact(firstName, lastName) {
-// 	this.firstName = firstName;
-// 	this.lastName = lastName;
-// 	this.addresses = [];
-// }
-//
-// Contact.prototype.fullName = function() {
-// 	return this.firstName + " " + this.lastName;
-// }
-//
-//
-// $(document).ready(function() {
-// 	$("form#new-contact").submit(function(event) {
-// 		event.preventDefault();
-//
-// 		var inputtedFirstName = $("input#new-first-name").val();
-// 		var inputtedLastName = $("input#new-last-name").val();
-// 		var newContact = new Contact(inputtedFirstName, inputtedLastName);
-//
-// 		$("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
-//
-// 		$("input#new-first-name").val("");
-// 		$("input#new-last-name").val("");
-//
-//
-// 		$(".contact").last().click(function() {
-// 		$("#show-contact").show();
-// 		$("#show-contact h2").text(newContact.fullName());
-// 		$(".first-name").text(newContact.firstName);
-// 		$(".last-name").text(newContact.lastName);
-// 	});
-//
-// 	});
-//
-// });
